@@ -15,11 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+		  registry-url: 'https://registry.npmjs.org'
       - name: Install, build and test
         run: |
           npm install
           npm run build
           npm run test
+	  - name: Publish
+        run: |
+          npm publish
+		env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
