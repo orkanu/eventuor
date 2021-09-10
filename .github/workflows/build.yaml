@@ -2,24 +2,24 @@ name: 'build-test'
 on: # rebuild any PRs and main branch changes
   pull_request:
   push:
-	branches:
-	  - main
-	  - 'releases/*'
+    branches:
+      - main
+      - 'releases/*'
   
 jobs:
   build:
-	runs-on: ubuntu-latest
-	strategy:
-		matrix:
-			node-version: [12.x]
-	steps:
-	  - uses: actions/checkout@v2
-	  - name: Node.js
-	  	uses: actions/setup-node@v1
-	  	with:
-		  node-version: ${{ matrix.node-version }}
-	  - name: Install, build and test
-	  - run: |
-		  npm install
-		  npm run build
-	  	  npm run test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.16.1]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install, build and test
+      - run: |
+          npm install
+          npm run build
+          npm run test

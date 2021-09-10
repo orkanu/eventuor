@@ -10,8 +10,7 @@
     "test": "jest --config jest.config.js --coverage --verbose --color --passWithNoTests -i",
     "test:watch": "jest --config jest.config.js --onlyChanged --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Marc",
   "devDependencies": {
     "@types/jest": "27.0.1",
     "jest": "27.1.1",
