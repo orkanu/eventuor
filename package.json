@@ -5,12 +5,20 @@
   "main": "dist/eventuor.js",
   "types": "dist/eventuor.d.ts",
   "license": "MIT",
+  "author": "Marc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orkanu/eventuor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orkanu/eventuor/issues"
+  },
+  "homepage": "https://github.com/orkanu/eventuor#readme"
   "scripts": {
     "build": "tsc",
     "test": "jest --config jest.config.js --coverage --verbose --color --passWithNoTests -i",
     "test:watch": "jest --config jest.config.js --onlyChanged --watch"
   },
-  "author": "Marc",
   "devDependencies": {
     "@types/jest": "27.0.1",
     "jest": "27.1.1",
