@@ -1,0 +1,17 @@
+# Folders
+.github/
+test/
+src/
+
+# Files
+.nvmrc
+tsconfig.tsbuildinfo
+*.log
+
+# IDE
+.nova
+.idea
+.vscode
+
+# TO INCLUDE
+!dist/

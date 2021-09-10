@@ -13,9 +13,9 @@
   "bugs": {
     "url": "https://github.com/orkanu/eventuor/issues"
   },
-  "homepage": "https://github.com/orkanu/eventuor#readme"
+  "homepage": "https://github.com/orkanu/eventuor#readme",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --build --verbose",
     "test": "jest --config jest.config.js --coverage --verbose --color --passWithNoTests -i",
     "test:watch": "jest --config jest.config.js --onlyChanged --watch"
   },
